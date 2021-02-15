@@ -15,8 +15,14 @@ const titleCased = () => {
   let newTutorials = tutorials.map(
     function(sentence) {
       let wordsArray = sentence.split(" ");
-      let newWordsArray = wordsArray.map( function(word) { return word.slice(0,1).toUpperCase()
-        + word.slice(1)} );
+      // let newWordsArray = wordsArray.map( function(word) { return word.slice(0,1).toUpperCase()
+      //   + word.slice(1)} );
+
+        let newWordsArray = wordsArray.map( function(word) { return word.charAt(0).toUpperCase()
+          + word.slice(1)} );
+  
+        // slice(0,1) say take index 0 and everything between 0 and 1 but not 1
+
       return newWordsArray.join(" ");
     }
   )
